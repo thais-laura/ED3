@@ -1,9 +1,10 @@
 #ifndef __FUNCOES_FEITAS__
 #define __FUNCOES_FEITAS__
-#define TAM 20
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "./funcoesFornecidas.h"
 
 typedef struct{
     int id;
@@ -16,14 +17,14 @@ typedef struct{
 } Especie;
 
 void inicializa_especie(Especie *esp);
-int le_registro(char nome_arq[TAM], int rrn, int relatorio);
+int le_registro(char *nome_arq, int rrn, int relatorio);
 int registra_info(char *nome_arq, int id, int dados[3], int populacao, char *status, int impacto_hum);
 int imprime_registro(Especie *esp);
-char * imprimir_campo(char *campo);
+char *imprime_campo(char *campo);
 void completa_campo(char* str, int tamanho);
 int verifica_id(FILE* arquivo, int id);
 int verifica_string(char* str);
 int verifica_status(char* status);
-void registra_especie(char* nome_arq, int n);
+int registra_especie(char* nome_arq, int n);
 
 #endif // __FUNCOES_FEITAS__

@@ -1,8 +1,7 @@
 #include "./funcoesFeitas.h"
 #define ERRO -1
-#define REG 131
 
-void inicializar_especie(Especie *esp){       // memset -- inicializa tudo com 0
+void inicializa_especie(Especie *esp){      
     esp->id = 0;
     strcpy(esp->nome, "\0");
     strcpy(esp->nome_cient, "\0");
@@ -16,11 +15,15 @@ void inicializar_especie(Especie *esp){       // memset -- inicializa tudo com 0
 //Preenche campos de string com o $, garantindo que o campo tenha o tamanho fixo
 
 void completa_campo(char* str, int tamanho) {
-    int len = strlen(str);  //Calculo do comprimento da string
-    for (int i = len; i < tamanho; i++) {
-        str[i] = '$';  //Preenche o restante da string com '$'
+    int len = strlen(str);
+    if (len >= tamanho) {
+        str[tamanho - 1] = '\0'; // Garante que não ultrapassará o limite do buffer
+    } else {
+        for (int i = len; i < tamanho - 1; i++) {
+            str[i] = '$';  // Preenche o restante da string com '$'
+        }
+        str[tamanho - 1] = '\0';  // Garante que o último caractere seja o terminador nulo
     }
-    str[tamanho - 1] = '\0';  //Garante que o último caractere seja o terminador nulo
 }
 
 //Ve se o ID é 0 e se já existe no arquivo
@@ -31,12 +34,12 @@ int verifica_id(FILE* arq, int id) {
         return 1;
     }
 
-    Especie especie_temp;  //Variavel temporária que armazena espécies lidas do arquivo
+    Especie esp_temp;  //Variavel temporária que armazena espécies lidas do arquivo
     fseek(arq, 0, SEEK_SET); //Garante que a leitura sera feita no início do arquivo p fazer a verificacao
 
     // Percorre o arquivo verificando se já existe uma espécie com o mesmo ID
-    while (fread(&especie_temp, sizeof(Especie), 1, arq) == 1) {
-        if (especie_temp.id == id) { //Compara o ID do arquivo com o inserido por ultimo na entrada
+    while (fread(&esp_temp, sizeof(Especie), 1, arq) == 1) {
+        if (esp_temp.id == id) { //Compara o ID do arquivo com o inserido por ultimo na entrada
             printf("Informação já inserida no arquivo.\n");
             return 1; //ID já existe
         }
@@ -60,146 +63,78 @@ int verifica_status(char* status) {
 }
 
 //Registra espécies no arquivo bin
-void registra_especie(char *nome_arq, int n) {
-    FILE *arq = fopen(nome_arq, "r+b"); // leitura e escrita no início do arquivo 
+int registra_especie(char *nome_arq, int n) {
+    FILE *arq = fopen(nome_arq, "w+b"); // leitura e escrita no início do arquivo 
     if(arq == NULL){
         printf("Falha no processamento do arquivo\n");
-        printf("Arq == NULL\n");
         return ERRO;                    // mudar pra 0 depois, pq já tem uma mensagem de erro
     }
-    Especie especie;  //Variavel que armazena os dados da especia q sera registrada
+    Especie esp;  //Variavel que armazena os dados da especia q sera registrada
 
     for (int i = 0; i < n; i++) {
         //Garante que a estrutura especie seja completamente zerada, para inicializar o registro
-        memset(&especie, 0, sizeof(Especie));
+        inicializa_especie(&esp);
 
         //Le ID
-        scanf("%d%*c", &especie.id);  // O '%*c' ignora o caractere '\n' após a entrada
+        scanf("%d%*c", &esp.id);  // O '%*c' ignora o caractere '\n' após a entrada
 
         //Chama a função do ID, para ver se já existe no arquivo ou se é 0
-        if (verifica_id(arq, especie.id)) {
+        if (verifica_id(arq, esp.id)) {
             continue;  //Pula para o próximo registro sem gravar o ID -- para essa iteração do for e vai para i+1
         }
 
         //Le o nome
-        readline(especie.nome);  //Le a string
-        if (verifica_string(especie.nome)) {
+        readline(esp.nome);  //Le a string
+        if (verifica_string(esp.nome)) {
             printf("Falha no processamento do arquivo.\n");
             continue;  //Pula para o proximo registro se o nome for inválido
         }
 
-        completa_campo(especie.nome, 41);  //Preenche o restante do campo com $
+        completa_campo(esp.nome, 41);  //Preenche o restante do campo com $
 
         //Le nome científico
-        readline(especie.nome_cient);  //Le a string
-        if (verifica_string(especie.nome_cient)) {
+        readline(esp.nome_cient);  //Le a string
+        if (verifica_string(esp.nome_cient)) {
             printf("Falha no processamento do arquivo.\n");
             continue;  //Pula para o próximo registro se o nome científico for inválido
         }
-        completa_campo(especie.nome_cient, 61);  //Preenche o campo restante com $
+        completa_campo(esp.nome_cient, 61);  //Preenche o campo restante com $
 
         //Le a população q pode ser nula
-        scanf("%d%*c", &especie.populacao);
+        scanf("%d%*c", &esp.populacao);
 
         //Le o status e verifica se é válido
-        readline(especie.status);  //Le a string do status
-        if (verifica_status(especie.status)) {
+        readline(esp.status);  //Le a string do status
+        if (verifica_status(esp.status)) {
             printf("Falha no processamento do arquivo.\n");
             continue;  //Pula para o próximo registro se o status for inválido
         }
-        completa_campo(especie.status, 9);  //Preenche p campo restante com $
+        completa_campo(esp.status, 9);  //Preenche p campo restante com $
 
         //Le as coord X e Y
-        scanf("%f %f%*c", &especie.localizacao[0], &especie.localizacao[1]);
-        //localizacao pode negativa???
-
-        // if (especie.localizacao[0] == 0 && especie.localizacao[1] == 0) {
-        //     printf("Falha no processamento do arquivo.\n");
-        //     continue;  //Pula para o próximo registro se a localização for inválida
-        // }
+        scanf("%f %f%*c", &esp.localizacao[0], &esp.localizacao[1]);
 
         //Le o impacto humano e verifica se é válido
-        scanf("%d%*c", &especie.impacto_hum);
-        if (especie.impacto_hum < 0 || especie.impacto_hum > 3) {
+        scanf("%d%*c", &esp.impacto_hum);
+        if (esp.impacto_hum < 0 || esp.impacto_hum > 3) {
             printf("Falha no processamento do arquivo.\n");
             continue;  //Pula para o próximo registro se for inválido
         }
 
         //Escreve no arquivo binário o registro da espécie, a sua estrutura!!
-        fwrite(&especie, sizeof(Especie), 1, arq);
-    }
+        fwrite(&esp.id, sizeof(int), 1, arq);               
+        fwrite(esp.nome, sizeof(char), 41, arq);          
+        fwrite(esp.nome_cient, sizeof(char), 61, arq);     
+        fwrite(&esp.populacao, sizeof(int), 1, arq);        
+        fwrite(esp.status, sizeof(char), 9, arq);          
+        fwrite(&esp.localizacao[0], sizeof(float), 1, arq); 
+        fwrite(&esp.localizacao[1], sizeof(float), 1, arq); 
+        fwrite(&esp.impacto_hum, sizeof(int), 1, arq);      
 
+    }
+       
     fclose(arq);
-}
-
-//essa função serve para as funcionalidades 2 e 3
-// ler todos os registros (rrn = 0 e relatorio = 1) ou le somente um registro depois do fseek (relatorio = 0)
-//usa fseek pra pular para o registro desejado
-int le_registro(char nome_arq[TAM], int rrn, int relatorio){   // file * arq
-    printf("Nome do arquivo: %s\n", nome_arq);                                    // retirar
-    FILE *arq = fopen(nome_arq, "rb");
-    if(arq == NULL){
-        printf("Falha no processamento do arquivo\n");
-        printf("Arq == NULL\n");
-        return ERRO;
-    }
-
-    // se entrar um rrn maior do que o possível, deve ter uma saída de erro
-    if(fseek(arq, 0, SEEK_END)!= 0){
-        printf("Falha no processamento do arquivo\n");
-        printf("Não conseguiu ir para o fim do arquivo\n");
-    }else{
-        int fim = ftell(arq);   // retorna em qual byte vc está do arquivo
-        if(fim <= rrn *REG){
-            printf("Espécie não encontrada\n");
-            fclose(arq);
-            return 0;
-        }    
-    }
-    
-    if(fseek(arq, rrn * REG, SEEK_SET) != 0){                        // fseek ou rewind
-        printf("Falha no processamento do arquivo\n");
-        printf("Não conseguiu voltar para o início do arquivo\n");
-        fclose(arq);
-        return ERRO;
-    }   
-
-    Especie *esp = (Especie *) malloc(sizeof(Especie));
-    if (esp == NULL) {
-        printf("Erro ao alocar memória para esp\n");
-        fclose(arq);
-        return ERRO;
-    }
-    inicializar_especie(esp);        // depois, se virmos que a leitura e a gravacao dos campos nessa variavel deu certo, podemos retirar essa inicializacao
-    int resp = 1;
-    char c;
-    do{
-        fread(&(esp->id), 4, 1, arq);
-        if(esp->id == 0){
-            printf("Erro: id inválido\n");
-        }
-        fread(esp->nome, 41, 1, arq);  // Aqui não precisa de &, pois "nome" já é um array
-        fread(esp->nome_cient, 61, 1, arq);  
-        fread(&(esp->populacao), 4, 1, arq);
-        fread(esp->status, 9, 1, arq);
-        fread(esp->localizacao, 8, 1, arq);
-        fread(&(esp->impacto_hum), 4, 1, arq);
-        resp = imprimir_registro(esp);               // se resp = 0, deu tudo certo para imprimir o registro
-        // comentar melhor
-        if(fread(&c, 1, 1, arq) == 1){               // conseguiu ler, então...
-            fseek(arq, -1, SEEK_CUR);                // ainda não é o fim do arquivo, precisa voltar um
-        }
-    }while (resp == 0 && relatorio && !feof(arq));   
-
-    /*
-    para o relatório:
-        rrn=0 e relatorio = 1 --> loop vai ate o fim do arquivo
-    para buscar um registro:
-        rrn= ? e relatório = 0 --> loop vai apenas uma vez
-    */
-
-    free(esp);
-    fclose(arq);
+    binarioNaTela(nome_arq);
     return 0;
 }
 
@@ -207,15 +142,14 @@ int le_registro(char nome_arq[TAM], int rrn, int relatorio){   // file * arq
 char * imprime_campo(char *campo){   
     if(strcmp(campo, "\0") == 0){
         printf("Espécie não encontrada\n"); //Erro ao gravar na variável -- resquícios da inicialização
-        printf("Na funcao imprimir_campo, algum campo não foi gravado --> string ainda = barra0\n"); //retirar isso dps
         return "-1";
     }else{
         int tamanho = strlen(campo);
+        
         int i;
         char *aux = (char *)malloc(tamanho + 1);
         if (aux == NULL) {
-            printf("Erro de alocação de memória\n"); // mudar erro?
-            printf("na funcao imprimir_campo, a variavel aux = NULL\n"); //retirar
+            printf("Falha no processamento do arquivo\n"); // mudar erro?
             return NULL;  
         }
         for(i=0; i<tamanho && campo[i] != '$'; i++){
@@ -231,87 +165,182 @@ char * imprime_campo(char *campo){
 int imprime_registro(Especie *esp){   
     if(esp == NULL){
         printf("Falha no processamento do arquivo\n");
-        printf("Na funcao imprimir_registro, a struct está vazia\n");  //retirar isso depois
         return ERRO;
     }
     printf("ID: %d\n", esp->id);
-    printf("Nome: %s\n", imprimir_campo(esp->nome)); 
-    printf("Nome científico: %s\n", imprimir_campo(esp->nome_cient)); 
-    
+    char * aux = imprime_campo(esp->nome);
+    printf("Nome: %s\n", aux); 
+    free(aux);
+    aux = imprime_campo(esp->nome_cient);
+    printf("Nome Científico: %s\n", aux); 
+    free(aux);
     if (esp->populacao ==0) printf("População: NULO\n");
     else printf("População: %d\n", esp->populacao);
 
-    printf("Status: %s\n", imprimir_campo(esp->status));  
-    printf("Localização: (%.2f,%.2f)\n", esp->localizacao[0], esp->localizacao[1]);
+    aux = imprime_campo(esp->status);
+    printf("Status: %s\n", aux);  
+    free(aux);
 
-    if (esp->impacto_hum ==0) printf("Impacto Humano: NULO\n");
+    printf("Localização: (%.2f, %.2f)\n", esp->localizacao[0], esp->localizacao[1]);
+
+    if (esp->impacto_hum ==0) printf("Impacto Humano: NULO\n\n");
     else printf("Impacto Humano: %d\n\n", esp->impacto_hum);
 
     return 0;
 }
-
-int registra_info(char *nome_arq, int id, int dados[3], int populacao, char *status, int impacto_hum){
-    FILE *arq = fopen(nome_arq, "r+b"); // leitura e escrita no início do arquivo 
+//essa função serve para as funcionalidades 2 e 3
+// ler todos os registros (rrn = 0 e relatorio = 1) ou le somente um registro depois do fseek (relatorio = 0)
+//usa fseek pra pular para o registro desejado
+int le_registro(char *nome_arq, int rrn, int relatorio){   // file * arq
+    FILE *arq = fopen(nome_arq, "rb");
     if(arq == NULL){
         printf("Falha no processamento do arquivo\n");
-        printf("Arq == NULL\n");
-        return ERRO;                    // mudar pra 0 depois, pq já tem uma mensagem de erro
+        return ERRO;
     }
-    int aux, flag = 0;
-    char c;
 
-    while(aux != id && !feof(arq)){
-        fseek(arq, REG, SEEK_CUR);            // REG - x
-        fread(&aux, 4, 1, arq);
+    Especie esp;
+    inicializa_especie(&esp); 
+    // se entrar um rrn maior do que o possível, deve ter uma saída de erro
+    if(relatorio == 0){
+        if(fseek(arq, 0, SEEK_END)!= 0){
+            printf("Falha no processamento do arquivo\n");
+        }else{
+            int fim = (int) ftell(arq);   // retorna em qual byte vc está do arquivo
+            if(fim <= rrn * sizeof(Especie)){
+                printf("Espécie não encontrada\n");
+                fclose(arq);
+                return 0;
+            }    
+        }
+        if(fseek(arq, 0, SEEK_SET) != 0){                        // fseek ou rewind
+            printf("Falha no processamento do arquivo\n");
+            fclose(arq);
+            return ERRO;
+        }
+        
+        for(int i=0; i<(rrn+1); i++){
+            int pos = (int)ftell(arq);
+            fread(&esp.id, sizeof(int), 1, arq);
+            fread(esp.nome, sizeof(char), 41, arq);
+            fread(esp.nome_cient, sizeof(char), 61, arq);
+            fread(&esp.populacao, sizeof(int), 1, arq);
+            fread(esp.status, sizeof(char), 9, arq);
+            fread(&esp.localizacao[0], sizeof(float), 1, arq);
+            fread(&esp.localizacao[1], sizeof(float), 1, arq);
+            fread(&esp.impacto_hum, sizeof(int), 1, arq);
+        }
+        
+        imprime_registro(&esp);
+        return 0;
+    }
+        
+    int resp = 1;
+    char c;
+    while (!feof(arq)){
+        fread(&esp.id, sizeof(esp.id), 1, arq);
+        fread(esp.nome, sizeof(esp.nome), 1, arq);
+        fread(esp.nome_cient, sizeof(esp.nome_cient), 1, arq);
+        fread(&esp.populacao, sizeof(esp.populacao), 1, arq);
+        fread(esp.status, sizeof(esp.status), 1, arq);
+        fread(&esp.localizacao[0], sizeof(esp.localizacao[0]), 1, arq);
+        fread(&esp.localizacao[1], sizeof(esp.localizacao[1]), 1, arq);
+        fread(&esp.impacto_hum, sizeof(esp.impacto_hum), 1, arq);
+        resp = imprime_registro(&esp);  
+        if(resp != 0){
+            printf("Falha no processamento do arquivo\n");
+        }             // se resp = 0, deu tudo certo para imprimir o registro
         if(fread(&c, 1, 1, arq) == 1){               // conseguiu ler, então...
             fseek(arq, -1, SEEK_CUR);                // ainda não é o fim do arquivo, precisa voltar um
-        }else{
-            flag = 1;
         }
     }
-    Especie especie_temp;
-    while (flag == 0 && !feof(arq)) {
-        fread(&especie_temp, sizeof(Especie), 1, arq) == 1;
-        if (especie_temp.id == id) { //Compara o ID do arquivo com o inserido por ultimo na entrada
-            flag = 1;
-        }if(fread(&c, 1, 1, arq) == 1){               // conseguiu ler, então...
-            fseek(arq, -1, SEEK_CUR); 
-        }
+   
+
+    fclose(arq);
+    return 0;
+}
+
+
+int registra_info(char *nome_arq, int id, int dados[3], int populacao, char *status, int impacto_hum){
+    FILE *arq = fopen(nome_arq, "r+b");
+    if(arq == NULL){
+        printf("Falha no processamento do arquivo\n");
+        return 0;
     }
 
-    if(flag == 0){                                 //nao encontrou o id e o arquivo todo já foi lido
-        printf("Espécie não encontrada\n");
-        printf("O id não foi encontrado para inserir novas informações\n");
-        return ERRO;                               // mudar pra 0 depois, pq já tem uma mensagem de erro
-    }
+    Especie esp;
+    int flag = 0;
+    char c;
 
-    if(dados[0]==1){                              // indica a populacao                            // vai indicar para pular menos
-        fseek(arq, 102, SEEK_CUR);
-        //inserir
-        
-    }if(dados[1] == 1){                            // indica o status 
-        if(dados[0] == 1){                         //status está em seguida da populacao
-            //inserir
-        }else{
-            fseek(arq, 106, SEEK_CUR);
-            //inserir
-        }
-    }if(dados[2]==1){                              // indica o impacto humano
-        if(dados[0]==1){
-            if(dados[1]==1){                       // nao pula mais nada 
-                fseek(arq, 8, SEEK_CUR);
-                //inserir
-            }else{                                 // pula o status
-                fseek(arq, 17, SEEK_CUR);
-                //inserir
+    while (fread(&esp.id, sizeof(int), 1, arq)) {
+        fread(esp.nome, sizeof(char), 41, arq);
+        fread(esp.nome_cient, sizeof(char), 61, arq);
+        fread(&esp.populacao, sizeof(int), 1, arq);
+        fread(esp.status, sizeof(char), 9, arq);
+        fread(&esp.localizacao[0], sizeof(float), 1, arq);
+        fread(&esp.localizacao[1], sizeof(float), 1, arq);
+        fread(&esp.impacto_hum, sizeof(int), 1, arq);
+        if (esp.id == id) {
+            if (dados[0] == 1 && esp.populacao != 0){
+                printf("Informação já inserida no arquivo\n");
+                flag = 1;
             }
-        }else{
-            fseek(arq, 123, SEEK_CUR);
+                
+            if (dados[1] == 1 && strcmp(esp.status, "NULO") != 0){
+                printf("Informação já inserida no arquivo\n");
+                flag = 1;
+            }
+            if (dados[2] == 1 && esp.impacto_hum != 0) {
+                printf("Informação já inserida no arquivo\n");
+                flag = 1;
+            
+            }
+            if(flag == 1){
+                fclose(arq);
+                binarioNaTela(nome_arq);
+                return 0;
+            }
+            // Se chegou aqui, nenhuma informação estava duplicada e podemos atualizar
+        
+            fseek(arq, -sizeof(esp.id), SEEK_CUR);
+            fseek(arq, -sizeof(esp.nome), SEEK_CUR);
+            fseek(arq, -sizeof(esp.nome_cient), SEEK_CUR);
+            fseek(arq, -sizeof(esp.populacao), SEEK_CUR);
+            fseek(arq, -sizeof(esp.status), SEEK_CUR);
+            fseek(arq, -sizeof(esp.localizacao[0]), SEEK_CUR);
+            fseek(arq, -sizeof(esp.localizacao[1]), SEEK_CUR);
+            fseek(arq, -sizeof(esp.impacto_hum), SEEK_CUR);
+
+            if (dados[0] == 1) { // Atualiza população
+                esp.populacao = populacao;
+            }
+            if (dados[1] == 1) { // Atualiza status
+                completa_campo(status, sizeof(esp.status));
+                strcpy(esp.status, status);
+            }
+            if (dados[2] == 1) { // Atualiza impacto humano
+                esp.impacto_hum = impacto_hum;
+            }
+
+            fwrite(&esp.id, sizeof(int), 1, arq);               
+            fwrite(esp.nome, sizeof(char), 41, arq);           
+            fwrite(esp.nome_cient, sizeof(char), 61, arq);     
+            fwrite(&esp.populacao, sizeof(int), 1, arq);        
+            fwrite(esp.status, sizeof(char), 9, arq);          
+            fwrite(&esp.localizacao[0], sizeof(float), 1, arq); 
+            fwrite(&esp.localizacao[1], sizeof(float), 1, arq); 
+            fwrite(&esp.impacto_hum, sizeof(int), 1, arq);      
+
+            fclose(arq);
+            binarioNaTela(nome_arq);
+            return 0;
+            
+        }else if(fread(&c, sizeof(char), 1, arq)==1){
+            fseek(arq, -(sizeof(char)), SEEK_CUR);
         }
     }
-    
+    printf("Espécie não encontrada\n");
+    //printf("NAO CONSEGUIU ESCREVER NO ARQUIVO\n");
     fclose(arq);
     binarioNaTela(nome_arq);
-
     return 0;
 }

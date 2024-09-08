@@ -32,6 +32,7 @@ void binarioNaTela(char* nomeArquivoBinario) { /* Você não precisa entender o 
     fseek(fs, 0, SEEK_SET);
     mb = (unsigned char*)malloc(fl);
     fread(mb, 1, fl, fs);
+    
 
     cs = 0;
     for (i = 0; i < fl; i++) {
