@@ -1,0 +1,400 @@
+ID: 42145
+Nome: Great White Shark
+Nome Científico: Carcharodon carcharias
+População: 1200
+Status: SAUDAVEL
+Localização: (0.00, 0.00)
+Impacto Humano: 1
+
+ID: 67892
+Nome: Blue Whale
+Nome Científico: Balaenoptera musculus
+População: NULO
+Status: CRITICA
+Localização: (0.00, 90.65)
+Impacto Humano: NULO
+
+ID: 84736
+Nome: Clownfish
+Nome Científico: Amphiprioninae
+População: 354
+Status: NULO
+Localização: (112.50, -45.32)
+Impacto Humano: 2
+
+ID: 92847
+Nome: Humpback Whale
+Nome Científico: Megaptera novaeangliae
+População: NULO
+Status: AMEACADA
+Localização: (0.00, 0.00)
+Impacto Humano: NULO
+
+ID: 37615
+Nome: Sea Turtle
+Nome Científico: Cheloniidae
+População: 2250
+Status: CRITICA
+Localização: (0.00, 36.15)
+Impacto Humano: 1
+
+ID: 12984
+Nome: Dolphin
+Nome Científico: Delphinus delphis
+População: NULO
+Status: SAUDAVEL
+Localização: (-47.65, 0.00)
+Impacto Humano: 3
+
+ID: 45312
+Nome: Octopus
+Nome Científico: Octopoda
+População: 198
+Status: SAUDAVEL
+Localização: (0.00, 0.00)
+Impacto Humano: 2
+
+ID: 39275
+Nome: Giant Squid
+Nome Científico: Architeuthis
+População: NULO
+Status: AMEACADA
+Localização: (12.35, 0.00)
+Impacto Humano: NULO
+
+ID: 54681
+Nome: Coral Reef
+Nome Científico: Anthozoa
+População: NULO
+Status: NULO
+Localização: (23.44, -12.85)
+Impacto Humano: NULO
+
+ID: 67123
+Nome: Starfish
+Nome Científico: Asteroidea
+População: 758
+Status: NULO
+Localização: (98.45, -72.31)
+Impacto Humano: 1
+
+ID: 54283
+Nome: Manta Ray
+Nome Científico: Manta birostris
+População: NULO
+Status: AMEACADA
+Localização: (0.00, 0.70)
+Impacto Humano: NULO
+
+ID: 97234
+Nome: Pufferfish
+Nome Científico: Tetraodontidae
+População: 342
+Status: SAUDAVEL
+Localização: (78.12, -13.45)
+Impacto Humano: 2
+
+ID: 24153
+Nome: Lobster
+Nome Científico: Nephropidae
+População: 965
+Status: NULO
+Localização: (56.43, 20.98)
+Impacto Humano: 2
+
+ID: 12397
+Nome: Seahorse
+Nome Científico: Hippocampus
+População: NULO
+Status: AMEACADA
+Localização: (103.20, 0.00)
+Impacto Humano: NULO
+
+ID: 89476
+Nome: Angelfish
+Nome Científico: Pomacanthidae
+População: 678
+Status: NULO
+Localização: (-89.75, 37.12)
+Impacto Humano: 1
+
+ID: 67123
+Nome: Jellyfish
+Nome Científico: Scyphozoa
+População: 1294
+Status: SAUDAVEL
+Localização: (45.25, 60.84)
+Impacto Humano: 3
+
+ID: 42198
+Nome: Sea Urchin
+Nome Científico: Echinoidea
+População: NULO
+Status: NULO
+Localização: (13.45, 39.60)
+Impacto Humano: NULO
+
+ID: 94283
+Nome: Krill
+Nome Científico: Euphausiacea
+População: 5000
+Status: SAUDAVEL
+Localização: (150.12, -50.75)
+Impacto Humano: 1
+
+ID: 83526
+Nome: Orca
+Nome Científico: Orcinus orca
+População: NULO
+Status: AMEACADA
+Localização: (0.40, 0.10)
+Impacto Humano: NULO
+
+ID: 75264
+Nome: Hammerhead Shark
+Nome Científico: Sphyrnidae
+População: 984
+Status: AMEACADA
+Localização: (67.43, -24.56)
+Impacto Humano: 2
+
+ID: 48123
+Nome: Moray Eel
+Nome Científico: Muraenidae
+População: NULO
+Status: SAUDAVEL
+Localização: (0.00, 0.00)
+Impacto Humano: 3
+
+ID: 67124
+Nome: Sea Snake
+Nome Científico: Hydrophiinae
+População: 1234
+Status: NULO
+Localização: (112.75, -8.53)
+Impacto Humano: 1
+
+ID: 98345
+Nome: Electric Eel
+Nome Científico: Electrophorus electricus
+População: NULO
+Status: AMEACADA
+Localização: (0.00, 0.00)
+Impacto Humano: NULO
+
+ID: 56123
+Nome: Sea Cucumber
+Nome Científico: Holothuroidea
+População: 932
+Status: SAUDAVEL
+Localização: (84.92, -15.43)
+Impacto Humano: 2
+
+ID: 73124
+Nome: Narwhal
+Nome Científico: Monodon monoceros
+População: NULO
+Status: NULO
+Localização: (0.00, 10.29)
+Impacto Humano: NULO
+
+ID: 47238
+Nome: Walrus
+Nome Científico: Odobenus rosmarus
+População: NULO
+Status: AMEACADA
+Localização: (0.00, 45.23)
+Impacto Humano: 3
+
+ID: 38124
+Nome: Penguin
+Nome Científico: Spheniscidae
+População: 754
+Status: CRITICA
+Localização: (0.00, -85.12)
+Impacto Humano: NULO
+
+ID: 59283
+Nome: Albatross
+Nome Científico: Diomedeidae
+População: 342
+Status: AMEACADA
+Localização: (-24.12, 70.13)
+Impacto Humano: 1
+
+ID: 18324
+Nome: Cuttlefish
+Nome Científico: Sepiida
+População: 872
+Status: SAUDAVEL
+Localização: (45.67, -12.12)
+Impacto Humano: 2
+
+ID: 73284
+Nome: Horseshoe Crab
+Nome Científico: Limulidae
+População: NULO
+Status: SAUDAVEL
+Localização: (18.20, 0.00)
+Impacto Humano: NULO
+
+ID: 17234
+Nome: Manatee
+Nome Científico: Trichechus
+População: 512
+Status: NULO
+Localização: (10.15, -25.67)
+Impacto Humano: 3
+
+ID: 87234
+Nome: Sea Lion
+Nome Científico: Otariinae
+População: NULO
+Status: AMEACADA
+Localização: (90.50, 0.00)
+Impacto Humano: NULO
+
+ID: 56321
+Nome: Harlequin Tuskfish
+Nome Científico: Choerodon fasciatus
+População: 278
+Status: SAUDAVEL
+Localização: (-23.15, 56.78)
+Impacto Humano: 2
+
+ID: 48192
+Nome: Tiger Shark
+Nome Científico: Galeocerdo cuvier
+População: NULO
+Status: AMEACADA
+Localização: (100.60, 10.40)
+Impacto Humano: NULO
+
+ID: 95123
+Nome: Sea Otter
+Nome Científico: Enhydra lutris
+População: NULO
+Status: AMEACADA
+Localização: (0.00, -15.76)
+Impacto Humano: 2
+
+ID: 62345
+Nome: Barracuda
+Nome Científico: Sphyraena
+População: 634
+Status: SAUDAVEL
+Localização: (78.32, -34.76)
+Impacto Humano: 1
+
+ID: 21354
+Nome: Marlin
+Nome Científico: Istiophoridae
+População: 792
+Status: SAUDAVEL
+Localização: (34.56, 12.65)
+Impacto Humano: 1
+
+ID: 98123
+Nome: Swordfish
+Nome Científico: Xiphias gladius
+População: NULO
+Status: SAUDAVEL
+Localização: (81.20, 0.00)
+Impacto Humano: NULO
+
+ID: 34128
+Nome: Lanternfish
+Nome Científico: Myctophidae
+População: 1298
+Status: SAUDAVEL
+Localização: (-25.65, 34.76)
+Impacto Humano: 3
+
+ID: 23145
+Nome: Flounder
+Nome Científico: Pleuronectidae
+População: NULO
+Status: NULO
+Localização: (10.90, 0.00)
+Impacto Humano: NULO
+
+ID: 67192
+Nome: Whale Shark
+Nome Científico: Rhincodon typus
+População: NULO
+Status: AMEACADA
+Localização: (0.00, 45.12)
+Impacto Humano: 1
+
+ID: 52314
+Nome: Stingray
+Nome Científico: Dasyatidae
+População: 234
+Status: SAUDAVEL
+Localização: (23.45, -12.34)
+Impacto Humano: 2
+
+ID: 87654
+Nome: Blue Tang
+Nome Científico: Paracanthurus hepatus
+População: NULO
+Status: SAUDAVEL
+Localização: (0.00, 87.43)
+Impacto Humano: NULO
+
+ID: 41235
+Nome: Grouper
+Nome Científico: Epinephelinae
+População: 432
+Status: SAUDAVEL
+Localização: (45.76, -23.45)
+Impacto Humano: 3
+
+ID: 57283
+Nome: Butterflyfish
+Nome Científico: Chaetodontidae
+População: NULO
+Status: SAUDAVEL
+Localização: (10.76, 0.00)
+Impacto Humano: NULO
+
+ID: 63214
+Nome: Lionfish
+Nome Científico: Pterois
+População: 675
+Status: SAUDAVEL
+Localização: (45.12, 67.45)
+Impacto Humano: 1
+
+ID: 91283
+Nome: Triggerfish
+Nome Científico: Balistidae
+População: NULO
+Status: SAUDAVEL
+Localização: (0.00, 98.54)
+Impacto Humano: NULO
+
+ID: 52134
+Nome: Crab
+Nome Científico: Brachyura
+População: 998
+Status: NULO
+Localização: (-12.65, 45.12)
+Impacto Humano: 1
+
+ID: 34125
+Nome: Leopard Shark
+Nome Científico: Triakis semifasciata
+População: NULO
+Status: AMEACADA
+Localização: (100.20, 87.54)
+Impacto Humano: NULO
+
+ID: 95172
+Nome: Sunfish
+Nome Científico: Mola mola
+População: NULO
+Status: NULO
+Localização: (45.12, 0.00)
+Impacto Humano: 2
+

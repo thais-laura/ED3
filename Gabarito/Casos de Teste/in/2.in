@@ -1,0 +1,1514 @@
+1 saida2.bin
+189
+53182
+Great White Shark
+Carcharodon carcharias
+564
+NULO
+-45.12
+34.76
+2
+78643
+Blue Whale
+Balaenoptera musculus
+0
+CRITICA
+12.3
+3.12
+0
+29384
+Clownfish
+Amphiprioninae
+2154
+SAUDAVEL
+123.12
+-67.45
+3
+51239
+Humpback Whale
+Megaptera novaeangliae
+3450
+AMEACADA
+-72.34
+15.67
+2
+82349
+Sea Turtle
+Cheloniidae
+0
+NULO
+0
+0
+1
+28374
+Dolphin
+Delphinus delphis
+0
+SAUDAVEL
+0.98
+0.89
+0
+31987
+Octopus
+Octopoda
+1023
+SAUDAVEL
+45.67
+-12.34
+3
+94283
+Giant Squid
+Architeuthis
+0
+CRITICA
+-112.45
+23.12
+1
+65827
+Coral Reef
+Anthozoa
+4532
+AMEACADA
+67.89
+-43.56
+2
+13485
+Starfish
+Asteroidea
+0
+SAUDAVEL
+0
+0.07
+0
+78532
+Manta Ray
+Manta birostris
+219
+AMEACADA
+-56.12
+45.67
+3
+78456
+Pufferfish
+Tetraodontidae
+432
+NULO
+65.34
+-23.12
+1
+12948
+Lobster
+Nephropidae
+0
+SAUDAVEL
+0.32
+0.23
+0
+23467
+Seahorse
+Hippocampus
+765
+AMEACADA
+87.45
+-12.34
+2
+89456
+Angelfish
+Pomacanthidae
+324
+SAUDAVEL
+-45.12
+32.45
+1
+54321
+Jellyfish
+Scyphozoa
+2875
+NULO
+0
+0
+3
+87123
+Sea Urchin
+Echinoidea
+0
+SAUDAVEL
+-67.89
+12.45
+2
+45678
+Krill
+Euphausiacea
+3450
+NULO
+123.45
+-34.56
+1
+98234
+Orca
+Orcinus orca
+2109
+AMEACADA
+67.45
+-23.12
+1
+35678
+Hammerhead Shark
+Sphyrnidae
+765
+AMEACADA
+0
+0
+3
+67124
+Moray Eel
+Muraenidae
+0
+NULO
+-89.12
+34.56
+2
+91234
+Sea Snake
+Hydrophiinae
+4321
+SAUDAVEL
+123.45
+-12.34
+1
+19384
+Electric Eel
+Electrophorus electricus
+0
+AMEACADA
+0
+10.5
+0
+49382
+Sea Cucumber
+Holothuroidea
+0
+SAUDAVEL
+0
+0
+2
+73829
+Narwhal
+Monodon monoceros
+312
+AMEACADA
+-45.23
+67.12
+1
+87532
+Walrus
+Odobenus rosmarus
+876
+NULO
+78.12
+-45.67
+3
+13829
+Penguin
+Spheniscidae
+0
+CRITICA
+0
+0
+0
+23567
+Albatross
+Diomedeidae
+542
+NULO
+67.89
+-23.12
+2
+49123
+Cuttlefish
+Sepiida
+675
+SAUDAVEL
+-45.34
+23.12
+3
+32756
+Horseshoe Crab
+Limulidae
+0
+SAUDAVEL
+0
+0
+0
+14578
+Manatee
+Trichechus
+987
+CRITICA
+-56.12
+34.56
+1
+57329
+Sea Lion
+Otariinae
+0
+AMEACADA
+0
+0
+0
+94235
+Harlequin Tuskfish
+Choerodon fasciatus
+432
+SAUDAVEL
+34.67
+-23.45
+2
+76324
+Tiger Shark
+Galeocerdo cuvier
+298
+NULO
+-78.23
+45.12
+1
+19423
+Sea Otter
+Enhydra lutris
+0
+AMEACADA
+0
+0
+2
+98234
+Barracuda
+Sphyraena
+324
+SAUDAVEL
+67.89
+-23.45
+1
+12495
+Marlin
+Istiophoridae
+832
+SAUDAVEL
+0
+0
+2
+76328
+Swordfish
+Xiphias gladius
+0
+SAUDAVEL
+0
+0
+0
+98524
+Lanternfish
+Myctophidae
+3421
+SAUDAVEL
+-67.45
+34.12
+3
+29431
+Flounder
+Pleuronectidae
+0
+NULO
+0
+0
+0
+48312
+Whale Shark
+Rhincodon typus
+543
+AMEACADA
+78.12
+-12.45
+1
+83924
+Stingray
+Dasyatidae
+298
+SAUDAVEL
+-56.12
+34.23
+2
+67345
+Blue Tang
+Paracanthurus hepatus
+0
+SAUDAVEL
+0
+0
+0
+87329
+Grouper
+Epinephelinae
+432
+NULO
+67.89
+-45.23
+1
+49213
+Butterflyfish
+Chaetodontidae
+0
+SAUDAVEL
+0
+0
+0
+74381
+Lionfish
+Pterois
+564
+SAUDAVEL
+78.45
+-12.23
+3
+49132
+Triggerfish
+Balistidae
+0
+SAUDAVEL
+0
+0
+0
+63215
+Crab
+Brachyura
+894
+SAUDAVEL
+45.67
+-23.12
+2
+34785
+Leopard Shark
+Triakis semifasciata
+0
+AMEACADA
+0.01
+0
+0
+95832
+Sunfish
+Mola mola
+432
+NULO
+-23.45
+67.23
+1
+98217
+Yellowfin Tuna
+Thunnus albacares
+2134
+SAUDAVEL
+0
+0
+2
+12753
+Atlantic Cod
+Gadus morhua
+0
+AMEACADA
+-45.23
+37.45
+1
+53782
+Pacific Halibut
+Hippoglossus stenolepis
+1456
+NULO
+98.34
+-23.12
+3
+65321
+Green Sea Turtle
+Chelonia mydas
+987
+CRITICA
+56.12
+-12.65
+1
+19823
+Beluga Whale
+Delphinapterus leucas
+0
+AMEACADA
+0
+0
+0
+72348
+Loggerhead Turtle
+Caretta caretta
+678
+AMEACADA
+-67.45
+34.67
+2
+89542
+Bottlenose Dolphin
+Tursiops truncatus
+1234
+SAUDAVEL
+87.12
+-67.23
+1
+32178
+Thresher Shark
+Alopias vulpinus
+0
+AMEACADA
+0
+0.01
+2
+63492
+Sawfish
+Pristidae
+875
+CRITICA
+-78.45
+12.34
+3
+78523
+Blacktip Reef Shark
+Carcharhinus melanopterus
+345
+SAUDAVEL
+23.12
+-56.34
+2
+12785
+Goliath Grouper
+Epinephelus itajara
+1324
+NULO
+0.87
+0
+1
+27634
+Swordfish
+Xiphias gladius
+0
+SAUDAVEL
+0
+0
+0
+82913
+Leatherback Turtle
+Dermochelys coriacea
+0
+CRITICA
+-45.12
+12.45
+2
+23578
+Common Octopus
+Octopus vulgaris
+678
+SAUDAVEL
+67.45
+-23.34
+1
+91352
+Ocean Sunfish
+Mola mola
+0
+AMEACADA
+0
+0
+2
+45329
+Harbor Seal
+Phoca vitulina
+876
+NULO
+87.12
+-23.45
+3
+12847
+Blue Marlin
+Makaira nigricans
+432
+SAUDAVEL
+-67.45
+23.12
+1
+53187
+Common Clownfish
+Amphiprion ocellaris
+934
+SAUDAVEL
+56.12
+-45.23
+2
+98234
+Northern Fur Seal
+Callorhinus ursinus
+675
+AMEACADA
+78.12
+-23.45
+1
+19423
+Striped Marlin
+Kajikia audax
+0
+SAUDAVEL
+0
+0
+0
+29584
+Great Barracuda
+Sphyraena barracuda
+1234
+NULO
+87.45
+-12.67
+1
+65349
+Porbeagle Shark
+Lamna nasus
+0
+CRITICA
+0
+0
+2
+23476
+Atlantic Bluefin Tuna
+Thunnus thynnus
+5432
+AMEACADA
+-78.23
+45.67
+3
+93521
+Whitetip Reef Shark
+Triaenodon obesus
+0
+SAUDAVEL
+0
+0
+0
+76452
+Fin Whale
+Balaenoptera physalus
+3456
+AMEACADA
+98.45
+-45.12
+1
+52983
+Humphead Wrasse
+Cheilinus undulatus
+0
+NULO
+-34.56
+12.45
+2
+39485
+Common Seahorse
+Hippocampus kuda
+1289
+SAUDAVEL
+45.12
+-67.34
+1
+12084
+Southern Elephant Seal
+Mirounga leonina
+2987
+AMEACADA
+-12.45
+34.23
+2
+38123
+Chambered Nautilus
+Nautilus pompilius
+0
+CRITICA
+0
+0
+3
+76423
+Bigeye Tuna
+Thunnus obesus
+543
+NULO
+67.45
+-23.12
+1
+82534
+Whale Shark
+Rhincodon typus
+0
+AMEACADA
+0
+0
+0
+23495
+Red Snapper
+Lutjanus campechanus
+1987
+SAUDAVEL
+87.23
+-45.12
+2
+12948
+Moon Jellyfish
+Aurelia aurita
+0
+SAUDAVEL
+0
+0
+1
+72394
+Humboldt Squid
+Dosidicus gigas
+2345
+SAUDAVEL
+-23.12
+34.67
+2
+87512
+Cuttlefish
+Sepia officinalis
+987
+AMEACADA
+67.89
+-23.12
+1
+48592
+Northern Right Whale
+Eubalaena glacialis
+543
+NULO
+0.9
+0.99
+3
+34928
+Sailfish
+Istiophorus platypterus
+0
+SAUDAVEL
+0
+0
+2
+76482
+Zebra Shark
+Stegostoma fasciatum
+756
+SAUDAVEL
+34.12
+-12.34
+1
+53921
+Black Marlin
+Istiompax indica
+1897
+NULO
+-45.34
+56.23
+3
+19283
+Pacific Sleeper Shark
+Somniosus pacificus
+0
+AMEACADA
+0.19
+0.21
+0
+83124
+Lionfish
+Pterois volitans
+789
+SAUDAVEL
+12.34
+-45.67
+2
+58213
+Whiptail Stingray
+Dasyatis brevis
+1456
+SAUDAVEL
+-67.12
+23.12
+1
+92348
+Southern Bluefin Tuna
+Thunnus maccoyii
+0
+CRITICA
+0
+0
+0
+43125
+Basking Shark
+Cetorhinus maximus
+678
+AMEACADA
+98.45
+-45.12
+2
+28491
+Grey Reef Shark
+Carcharhinus amblyrhynchos
+0
+SAUDAVEL
+0
+0
+1
+52394
+Spiny Dogfish
+Squalus acanthias
+2345
+SAUDAVEL
+78.12
+-34.45
+3
+19425
+Emperor Angelfish
+Pomacanthus imperator
+0
+AMEACADA
+0
+0
+0
+67213
+Black Sea Bass
+Centropristis striata
+1123
+NULO
+-23.34
+45.67
+2
+13842
+Atlantic Mackerel
+Scomber scombrus
+2345
+AMEACADA
+0
+0
+1
+98432
+Pink Salmon
+Oncorhynchus gorbuscha
+1567
+SAUDAVEL
+23.45
+-67.12
+3
+76281
+Albacore Tuna
+Thunnus alalunga
+0
+AMEACADA
+0
+0
+2
+45193
+Atlantic Croaker
+Micropogonias undulatus
+786
+SAUDAVEL
+12.34
+-56.12
+1
+28492
+Bigeye Trevally
+Caranx sexfasciatus
+1345
+AMEACADA
+67.89
+-23.12
+2
+39152
+Bull Shark
+Carcharhinus leucas
+0
+CRITICA
+-45.67
+78.23
+3
+18429
+Atlantic Stingray
+Dasyatis sabina
+987
+SAUDAVEL
+-23.12
+45.76
+1
+91243
+Pacific Sardine
+Sardinops sagax
+2234
+SAUDAVEL
+0.23
+0.12
+2
+84321
+California Sea Lion
+Zalophus californianus
+654
+NULO
+34.56
+-23.45
+3
+97213
+Yellowtail Snapper
+Ocyurus chrysurus
+0
+SAUDAVEL
+0
+0
+0
+27184
+Skipjack Tuna
+Katsuwonus pelamis
+1987
+AMEACADA
+-56.78
+23.34
+1
+35492
+Shortfin Mako Shark
+Isurus oxyrinchus
+0
+CRITICA
+-34.56
+67.12
+3
+12937
+Yellowfin Grouper
+Mycteroperca venenosa
+543
+AMEACADA
+45.34
+-12.23
+2
+67132
+Atlantic Bonito
+Sarda sarda
+234
+SAUDAVEL
+67.89
+-23.12
+1
+48231
+Lumpfish
+Cyclopterus lumpus
+0
+SAUDAVEL
+0
+0
+0
+32845
+Haddock
+Melanogrammus aeglefinus
+987
+AMEACADA
+-78.34
+45.23
+2
+89324
+Scalloped Hammerhead
+Sphyrna lewini
+1234
+CRITICA
+45.12
+-67.45
+3
+74239
+Atlantic Salmon
+Salmo salar
+0
+AMEACADA
+0
+0
+1
+21345
+Bluefish
+Pomatomus saltatrix
+876
+SAUDAVEL
+34.12
+-12.45
+2
+48132
+Grey Snapper
+Lutjanus griseus
+0
+AMEACADA
+0
+0
+2
+67241
+Silver Perch
+Bairdiella chrysoura
+789
+AMEACADA
+-12.34
+56.78
+1
+98312
+Nassau Grouper
+Epinephelus striatus
+1345
+CRITICA
+45.67
+-23.45
+3
+49283
+Longfin Mako Shark
+Isurus paucus
+0
+SAUDAVEL
+0
+0
+0
+13492
+Pilot Whale
+Globicephala macrorhynchus
+1543
+AMEACADA
+78.23
+-45.67
+2
+76183
+Yellow Snapper
+Lutjanus argentiventris
+0
+SAUDAVEL
+-23.45
+34.56
+1
+39285
+Wreckfish
+Polyprion americanus
+987
+CRITICA
+67.34
+-12.45
+3
+18294
+Atlantic Blue Marlin
+Makaira nigricans
+1342
+AMEACADA
+23.45
+-67.89
+2
+54382
+Horse-eye Jack
+Caranx latus
+0
+AMEACADA
+0
+0
+1
+38412
+Pacific Bluefin Tuna
+Thunnus orientalis
+2345
+CRITICA
+0.01
+0
+2
+76481
+King Mackerel
+Scomberomorus cavalla
+765
+SAUDAVEL
+34.23
+-78.12
+3
+49123
+Cobia
+Rachycentron canadum
+0
+SAUDAVEL
+-23.45
+67.89
+1
+84392
+Sandbar Shark
+Carcharhinus plumbeus
+987
+AMEACADA
+45.67
+-34.23
+2
+32849
+Broomtail Grouper
+Mycteroperca xenarcha
+3456
+AMEACADA
+-45.12
+67.34
+3
+59231
+Alaska Pollock
+Gadus chalcogrammus
+0
+CRITICA
+0
+0
+2
+27138
+King Salmon
+Oncorhynchus tshawytscha
+1456
+SAUDAVEL
+67.12
+-12.34
+1
+98413
+Dog Snapper
+Lutjanus jocu
+0
+AMEACADA
+0.1
+0.2
+1
+34921
+Pacific Cod
+Gadus macrocephalus
+2341
+CRITICA
+-78.12
+23.45
+3
+91384
+Pink Snapper
+Chrysophrys auratus
+987
+AMEACADA
+12.34
+-56.78
+2
+23812
+Golden Trevally
+Gnathanodon speciosus
+0
+SAUDAVEL
+0
+0
+2
+19483
+Bonnethead Shark
+Sphyrna tiburo
+1342
+AMEACADA
+-45.67
+34.12
+1
+76421
+Spotted Eagle Ray
+Aetobatus narinari
+0
+AMEACADA
+0.1
+0.8
+3
+48329
+Yellowtail Amberjack
+Seriola lalandi
+5432
+CRITICA
+78.34
+-12.67
+2
+21398
+Queen Triggerfish
+Balistes vetula
+0
+SAUDAVEL
+0.76
+0.89
+0
+57324
+Striped Bass
+Morone saxatilis
+1209
+AMEACADA
+45.12
+-23.45
+1
+17428
+Spanish Mackerel
+Scomberomorus maculatus
+987
+SAUDAVEL
+-67.45
+34.12
+2
+98231
+White Sturgeon
+Acipenser transmontanus
+0
+CRITICA
+0
+0
+3
+67123
+Bluespotted Ribbontail Ray
+Taeniura lymma
+1234
+SAUDAVEL
+67.45
+-23.12
+1
+28394
+Common Dolphinfish
+Coryphaena hippurus
+2345
+AMEACADA
+-12.34
+45.67
+2
+91283
+Atlantic Spadefish
+Chaetodipterus faber
+987
+SAUDAVEL
+34.12
+-67.89
+3
+48123
+Shortfin Squid
+Illex illecebrosus
+0
+AMEACADA
+0.1
+0.12
+2
+18473
+Sand Tiger Shark
+Carcharias taurus
+1456
+AMEACADA
+67.12
+-45.34
+1
+76238
+Peacock Flounder
+Bothus mancus
+789
+SAUDAVEL
+-34.56
+78.23
+3
+21984
+Bowmouth Guitarfish
+Rhinobatos typus
+0
+AMEACADA
+0
+0
+2
+45231
+Smooth Hammerhead
+Sphyrna zygaena
+2341
+CRITICA
+45.34
+-12.23
+1
+12378
+Giant Manta Ray
+Manta birostris
+567
+NULO
+0
+0.8
+0
+89324
+Frilled Shark
+Chlamydoselachus anguineus
+876
+AMEACADA
+23.45
+-67.12
+3
+59312
+Atlantic Wolffish
+Anarhichas lupus
+0
+CRITICA
+0
+0
+2
+34912
+Pacific Viperfish
+Chauliodus macouni
+2345
+AMEACADA
+-78.45
+34.12
+1
+98324
+Red Drum
+Sciaenops ocellatus
+654
+SAUDAVEL
+34.56
+-23.12
+2
+76219
+Atlantic Tarpon
+Megalops atlanticus
+0
+NULO
+0
+0
+3
+23874
+Bigeye Tuna
+Thunnus obesus
+3456
+CRITICA
+-23.45
+78.12
+1
+48213
+Japanese Spider Crab
+Macrocheira kaempferi
+0
+SAUDAVEL
+0.8
+0
+0
+23149
+Atlantic Angel Shark
+Squatina dumeril
+765
+AMEACADA
+45.12
+-67.45
+3
+76184
+Humpback Anglerfish
+Melanocetus johnsonii
+987
+NULO
+-34.56
+12.45
+1
+34923
+California Sheephead
+Semicossyphus pulcher
+1234
+SAUDAVEL
+23.12
+-45.67
+2
+49138
+Whale Shark
+Rhincodon typus
+0
+AMEACADA
+0.1
+0.9
+0
+98412
+Black Grouper
+Mycteroperca bonaci
+543
+AMEACADA
+-78.34
+45.12
+3
+67194
+Orange Roughy
+Hoplostethus atlanticus
+0
+CRITICA
+10.2
+0
+1
+87439
+Brittlestar
+Ophiuroidea
+567
+SAUDAVEL
+34.12
+-67.45
+2
+13892
+Giant Isopod
+Bathynomus giganteus
+0
+AMEACADA
+0
+0
+3
+74213
+Cookiecutter Shark
+Isistius brasiliensis
+1234
+SAUDAVEL
+-45.67
+23.12
+2
+32941
+Pacific Sleeper Shark
+Somniosus pacificus
+0
+CRITICA
+100.3
+0.1
+1
+98321
+Atlantic Goliath Grouper
+Epinephelus itajara
+432
+AMEACADA
+-34.12
+45.67
+3
+25148
+Oceanic Whitetip Shark
+Carcharhinus longimanus
+0
+NULO
+0
+0
+2
+73249
+Humboldt Squid
+Dosidicus gigas
+765
+AMEACADA
+67.12
+-23.45
+1
+12973
+Threadfin
+Hemiramphidae
+987
+NULO
+-78.45
+34.56
+2
+87431
+Bigeye Thresher Shark
+Alopias superciliosus
+0
+CRITICA
+0
+0
+3
+93241
+Sixgill Shark
+Hexanchus griseus
+1345
+NULO
+45.67
+-23.12
+1
+57391
+Scalloped Hammerhead
+Sphyrna lewini
+0
+AMEACADA
+0
+0
+0
+13894
+Giant Pacific Octopus
+Enteroctopus dofleini
+1432
+SAUDAVEL
+-12.34
+45.67
+2
+92483
+Slipper Lobster
+Scyllaridae
+0
+AMEACADA
+10.4
+0.1
+1
+49321
+Chilean Sea Bass
+Dissostichus eleginoides
+789
+NULO
+23.45
+-67.12
+3
+74293
+Opah
+Lampris guttatus
+987
+AMEACADA
+-45.12
+34.56
+1
+23491
+Atlantic Hagfish
+Myxine glutinosa
+234
+CRITICA
+0
+0
+2
+39213
+Yellowtail Scad
+Atule mate
+0
+SAUDAVEL
+0.12
+0.13
+1
+76412
+Pacific Blue Marlin
+Makaira mazara
+1321
+NULO
+67.34
+-12.45
+3
+58214
+Smooth Stingray
+Dasyatis brevicaudata
+0
+AMEACADA
+0.1
+0.2
+0
+13824
+Roughskin Dogfish
+Cirrhigaleus asper
+765
+SAUDAVEL
+-34.12
+45.67
+2
+98324
+Coelacanth
+Latimeria chalumnae
+0
+CRITICA
+10.6
+0.2
+3
+52943
+Giant Kelp Fish
+Heterostichus rostratus
+1234
+NULO
+-12.34
+67.45
+1
+23418
+Pacific White Shrimp
+Litopenaeus vannamei
+987
+SAUDAVEL
+45.12
+-23.45
+2
