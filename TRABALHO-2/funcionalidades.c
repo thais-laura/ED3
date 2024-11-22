@@ -105,6 +105,7 @@ void funcionalidade8(char *nome_arqDados, char *nome_arqInd, char *nome){
         msg_arquivo_inexistente();
         return;
     }if(atualiza_status(arqDados, '0')){            // Atualiza o arquivo como inconsistente caso ele esteja consistente
+        msg_erro_padrao();
         fclose(arqDados);
         return;
     }
@@ -112,7 +113,7 @@ void funcionalidade8(char *nome_arqDados, char *nome_arqInd, char *nome){
     le_cabecalho(arqDados, &cab);
     if((byteoffset-1600)/160 >= cab.proxRRN){       // Verifica se existe o registro no arquivo de dados por meio do RRN
         msg_registro_inexistente();
-        atualiza_status(arqDados, '1');             // Atualiza como consistente novamente
+        atualiza_arqDados, '1');             // Atualiza como consistente novamente
         fclose(arqDados);
         return;
     }
@@ -141,16 +142,21 @@ void funcionalidade9(char *nome_arqDados,  char *nome_ardInd, int qtd){
         msg_arquivo_inexistente();
         return;
     }
-    if(atualiza_status(arqDados, '0'))               	// Define o status do arquivo como inconsistente se antes estiver consistente
+    if(atualiza_status(arqDados, '0')){               	// Define o status do arquivo como inconsistente se antes estiver consistente
+        fclose(arqDados);
+        msg_erro_padrao();
         return;
-
+    }
     FILE *arqInd = fopen(nome_ardInd, "rb+");
     if(arqInd == NULL){                            	    // Não foi possível manipular o arquivo
         msg_arquivo_inexistente();
         return;
     }
-    if(atualiza_statusArv(arqInd, '0'))               	// Define o status do arquivo como inconsistente se antes estiver consistente
+    if(atualiza_statusArv(arqInd, '0')){               	// Define o status do arquivo como inconsistente se antes estiver consistente
+        fclose(arqDados);
+        msg_erro_padrao();
         return;
+    }
 
     Cabecalho cabDados;
     le_cabecalho(arqDados, &cabDados);
